@@ -1,0 +1,14 @@
+{
+  "name": "odin-todos",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Samuel Pedro <redsamuel.cruz7@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "css-loader": "^4.3.0",
+    "file-loader": "^6.1.0",
+    "style-loader": "^1.2.1",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  }
+}
