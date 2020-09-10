@@ -7,7 +7,7 @@ const Project = (id, name, todos) => {
   const getName = () => _name;
   const getTodos = () => _todos;
 
-  const renameProject = (newName) => { _name = newName }
+  const rename = (newName) => { _name = newName }
 
   const addTodo = (todo) => {
     _todos.push(todo);
@@ -20,7 +20,7 @@ const Project = (id, name, todos) => {
     getId,
     getName,
     getTodos,
-    renameProject,
+    rename,
     addTodo,
     removeTodo
   }
