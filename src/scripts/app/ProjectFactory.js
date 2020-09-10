@@ -1,4 +1,4 @@
-const Project = (id, name, todos) => {
+const Project = (id, name, todos=[]) => {
   const _id = id;
   let _name = name;
   const _todos = todos;
