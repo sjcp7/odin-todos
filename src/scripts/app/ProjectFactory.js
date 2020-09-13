@@ -1,9 +1,9 @@
 const Project = (id, name, todos=[]) => {
   const addTodo = (todo) => {
-    _todos.push(todo);
+    todos.push(todo);
   }
   const removeTodo = (todoId) => {
-    _todos.splice(todoId, 1);
+    todos.splice(todoId, 1);
   }
 
   return {
