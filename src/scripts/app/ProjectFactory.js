@@ -1,13 +1,5 @@
 const Project = (id, name, todos=[]) => {
-  const _id = id;
-  let _name = name;
   const _todos = todos;
-
-  const getId = () => _id;
-  const getName = () => _name;
-  const getTodos = () => _todos;
-
-  const rename = (newName) => { _name = newName }
 
   const addTodo = (todo) => {
     _todos.push(todo);
@@ -17,10 +9,9 @@ const Project = (id, name, todos=[]) => {
   }
 
   return {
-    getId,
-    getName,
-    getTodos,
-    rename,
+    id,
+    name,
+    _todos,
     addTodo,
     removeTodo
   }
