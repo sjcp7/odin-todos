@@ -1,37 +1,26 @@
 const Storage = () => {
 
-  const getProjects = () => JSON.parse(localStorage.getItem('projects'));
+  const getProjects = () => {
+    const projects = JSON.parse(localStorage.getItem('projects'));
+    if (projects == null) return [];
+    return projects;
+  };
 
   const getProject = (id) => {
     const projects = getProjects();
-    projects.forEach(project => {
-      if (project.getId() === id) return project;
-    });
-    return null;
+    let project;
+    projects.forEach(proj => {
+      if (proj.id == id) {
+        project = proj;
+      }
+    })
+    return project;    
   }
 
-  const getTodos = (projectId) => {
+  const addProject = (project) => {
     const projects = getProjects();
-    projects.forEach(project => {
-      if (project.getId() === projectId) {
-        return project.getTodos();
-      }
-    });
-    return null;
-  }
-
-  const getTodo = (projectId, todoId) => {
-    const projects = getProjects();
-    projects.forEach(project => {
-      if (project.getId() === projectId) {
-        const todos = project.getTodos();
-        for (let todo in todos) {
-          if (todo.id === todoId) { return todo }
-        }
-        return null;
-      }
-    });
-    return null;
+    projects.push(project);
+    saveProjects(projects);
   }
 
   const saveProjects = (projects) => {
@@ -41,9 +30,7 @@ const Storage = () => {
   return {
     getProjects,
     getProject,
-    getTodos,
-    getTodo,
-    saveProjects
+    addProject
   }
 }
 
