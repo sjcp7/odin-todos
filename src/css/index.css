@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
+
+.centered {
+  margin: 0 auto;
+  width: 50%;
+}
+
+.fas-vert-align {
+  font-size: 27px;
+  padding-top: 5px;
+}
+
+.fa-trash-alt, .fa-plus, .fa-edit, .fa-times {
+  cursor: pointer;
+}
+
+nav {
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 200px; 
+  position: fixed; 
+  z-index: 1; 
+  top: 0; 
+  left: 0;
+  background-color: rgb(87, 87, 87); 
+  overflow-x: hidden; 
+  padding-top: 20px;
+}
+
+nav section {
+  display: flex;
+  color: white;
+  padding-left: 10px;
+}
+
+nav section h2 {
+  font-size: 25px;
+  margin-right: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav li {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #cecece;
+  cursor: pointer;
+}
+
+main {
+  margin-left: 200px;
+  padding: 20px 10px;  
+}
+
+#project-info-card {
+  display: flex;
+  justify-content: space-between;
+}
+
+#tasks-banner {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+  border-bottom: 1px solid black;
+  padding-bottom: 10px;
+}
+
+.task-card {
+  margin-top: 20px;
+  border: 1.5px solid black;
+  padding: 10px;
+  border-radius: 5px;  
+}
+
+.task-card section {
+  display: flex;
+} 
+
+.task-card section input {
+  height: 20px;
+  width: 20px;
+  display: inline-block;
+  vertical-align: middle;
+  
+}
+
+.task-card section h2 {
+  margin-left: 10px;
+}
+
+.task-card h3, .task-card p {
+  margin-left: 32px;
+}
+
+.task-card div {
+  display: flex;
+  justify-content: flex-end;
+  
+}
+
+.modal {
+  display: none;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.close {
+  float: right;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.modal section {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  border: 1px solid #888;
+  
+}
+
+.modal section div {
+  padding: 10px 16px;
+  background-color: rgb(87, 87, 87);
+  color: white;
+}
+
+.modal section div h4 {
+  font-size: 20px;
+}
+
+.modal section form {
+  padding: 10px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.modal section form label {
+  font-size: 18px;
+}
+
+.modal section form input, .modal section form button, .modal section form select {
+  margin-bottom: 7px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+.modal section form button {
+  cursor: pointer;
+}
+
+.modal section form button:hover {
+  background-color: #bbbbbb;
+}
+
+.visible {
+  display: block;
+}
+
+.project-modal section {
+  width: 20%;
+}
+
+.todo-modal section {
+  width: 40%;
+}
+
+.todo-modal textarea {
+  padding: 3px;
+  border-radius: 5px;
+}
+
+
