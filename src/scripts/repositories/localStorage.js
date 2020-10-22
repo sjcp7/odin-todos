@@ -30,7 +30,8 @@ const Storage = () => {
   return {
     getProjects,
     getProject,
-    addProject
+    addProject,
+    saveProjects
   }
 }
 
