@@ -18,12 +18,15 @@ const Controller = () => {
   const newProject = (id, name, todos=[]) => Project(id, name, todos);
 
   const newTodo = (id, title, description, deadline, priority) => Todo(id, title, description, deadline, priority);
+
+  const saveProjects = (projects) => db.saveProjects(projects);
   
   return {
     getProjects,
     getProject,
     newProject,
-    newTodo
+    newTodo,
+    saveProjects
   }
 }
 
