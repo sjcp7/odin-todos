@@ -19,13 +19,19 @@ const taskCard = (task) => {
   priority.textContent = task.priority;
 
   const btns = document.createElement('div');
-  const editBtn = document.createElement('span');
-  editBtn.className = 'fas fa-edit fas-vert-align';
-  const delBtn = document.createElement('span');
-  delBtn.className = 'fas fa-trash-alt fas-vert-align';
 
-  btns.appendChild(editBtn);
-  btns.appendChild(delBtn);
+  const editBtn = document.createElement('i');
+  editBtn.className = 'fas fa-edit fas-vert-align';
+  const editBtnWrapper = document.createElement('span');
+  editBtnWrapper.appendChild(editBtn);
+
+  const delBtn = document.createElement('i');
+  delBtn.className = 'fas fa-trash-alt fas-vert-align';
+  const delBtnWrapper = document.createElement('span');
+  delBtnWrapper.appendChild(delBtn);
+
+  btns.appendChild(editBtnWrapper);
+  btns.appendChild(delBtnWrapper);
 
   card.appendChild(section);
   card.appendChild(description);

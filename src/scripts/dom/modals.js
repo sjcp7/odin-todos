@@ -3,12 +3,16 @@ const newProject = () => {
   modal.className = 'modal project-modal new-project-modal';
   const section = document.createElement('section');
   const div = document.createElement('div');
-  const closeBtn = document.createElement('span');
+
+  const closeBtn = document.createElement('i');
   closeBtn.className = 'close fas fa-times fas-vert-align';
+  const closeBtnWrapper = document.createElement('span');
+  closeBtnWrapper.appendChild(closeBtn);
+
   const h4 = document.createElement('h4');
   h4.textContent = 'New Project';
 
-  div.appendChild(closeBtn);
+  div.appendChild(closeBtnWrapper);
   div.appendChild(h4);
 
   const form = document.createElement('form');
@@ -46,12 +50,16 @@ const editProject = () => {
   modal.className = 'modal project-modal edit-project-modal';
   const section = document.createElement('section');
   const div = document.createElement('div');
-  const closeBtn = document.createElement('span');
+  
+  const closeBtn = document.createElement('i');
   closeBtn.className = 'close fas fa-times fas-vert-align';
+  const closeBtnWrapper = document.createElement('span');
+  closeBtnWrapper.appendChild(closeBtn); 
+
   const h4 = document.createElement('h4');
   h4.textContent = 'Edit Project';
 
-  div.appendChild(closeBtn);
+  div.appendChild(closeBtnWrapper);
   div.appendChild(h4);
 
   const form = document.createElement('form');
@@ -89,12 +97,16 @@ const newTodo = () => {
   const section = document.createElement('section');
   
   const div = document.createElement('div');
-  const closeBtn = document.createElement('span');
-  closeBtn.className = 'close fas fa-times fas-vert-align';
+
+  const closeBtn = document.createElement('i');
+  closeBtn.className = 'close fas fa-times fas-vert-align'; 
+  const closeBtnWrapper = document.createElement('span');
+  closeBtnWrapper.appendChild(closeBtn);
+
   const h4 = document.createElement('h4');
   h4.textContent = 'New Todo';
 
-  div.appendChild(closeBtn);
+  div.appendChild(closeBtnWrapper);
   div.appendChild(h4);
 
   const form = document.createElement('form');
@@ -176,12 +188,16 @@ const editTodo = () => {
   const section = document.createElement('section');
   
   const div = document.createElement('div');
-  const closeBtn = document.createElement('span');
+
+  const closeBtn = document.createElement('i');
   closeBtn.className = 'close fas fa-times fas-vert-align';
+  const closeBtnWrapper = document.createElement('span');
+  closeBtnWrapper.appendChild(closeBtn);
+
   const h4 = document.createElement('h4');
   h4.textContent = 'Edit Todo';
 
-  div.appendChild(closeBtn);
+  div.appendChild(closeBtnWrapper);
   div.appendChild(h4);
 
   const form = document.createElement('form');

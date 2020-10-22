@@ -5,8 +5,10 @@ const nav = (projects) => {
   const h2 = document.createElement('h2');
   h2.textContent = 'Projects';
 
-  const addBtn = document.createElement('span');
+  const addBtn = document.createElement('i');
+  const addBtnWrappper = document.createElement('span');
   addBtn.className = 'fas fa-plus fas-vert-align';
+  addBtnWrappper.appendChild(addBtn);
 
   const projectsList = document.createElement('ul');
   projectsList.classList.add('projects-list');
@@ -21,7 +23,7 @@ const nav = (projects) => {
   }
 
   section.appendChild(h2);
-  section.appendChild(addBtn);
+  section.appendChild(addBtnWrappper);
 
   el.appendChild(section);
   el.appendChild(projectsList);
