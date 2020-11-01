@@ -34,15 +34,9 @@ const newProject = () => {
 
   modal.appendChild(section);
 
-  const render = () => {
-    const contentCont = document.querySelector('#content');
-    contentCont.appendChild(modal);
-  }
+ 
 
-  return {
-    modal,
-    render
-  }
+  return modal;
 }
 
 const editProject = () => {
@@ -80,15 +74,9 @@ const editProject = () => {
   section.appendChild(form);
 
   modal.appendChild(section);
-  const render = () => {
-    const contentCont = document.querySelector('#content');
-    contentCont.appendChild(modal);
-  }
 
-  return {
-    modal,
-    render
-  }
+
+  return modal;
 }
 
 const newTodo = () => {
@@ -145,10 +133,13 @@ const newTodo = () => {
   cmb.id = 'todo-priority';
   const lowPri = document.createElement('option');
   lowPri.setAttribute('value', 'low');
+  lowPri.textContent = 'Low';
   const medPri = document.createElement('option');
   medPri.setAttribute('value', 'medium'); 
+  medPri.textContent = 'Medium';
   const highPri = document.createElement('option');
   highPri.setAttribute('value', 'high');
+  highPri.textContent = 'High';
   
   cmb.appendChild(lowPri);
   cmb.appendChild(medPri);
@@ -171,15 +162,9 @@ const newTodo = () => {
   section.appendChild(form);
   
   modal.appendChild(section);
-  const render = () => {
-    const contentCont = document.querySelector('#content');
-    contentCont.appendChild(modal);
-  }
+  
 
-  return {
-    modal,
-    render
-  }
+  return modal;
 }
 
 const editTodo = () => {
@@ -236,10 +221,13 @@ const editTodo = () => {
   cmb.id = 'edit-todo-priority';
   const lowPri = document.createElement('option');
   lowPri.setAttribute('value', 'low');
+  lowPri.textContent = 'Low';
   const medPri = document.createElement('option');
   medPri.setAttribute('value', 'medium'); 
+  medPri.textContent = 'Medium';
   const highPri = document.createElement('option');
   highPri.setAttribute('value', 'high');
+  highPri.textContent = 'High';
   
   cmb.appendChild(lowPri);
   cmb.appendChild(medPri);
@@ -262,15 +250,8 @@ const editTodo = () => {
   section.appendChild(form);
   
   modal.appendChild(section);
-  const render = () => {
-    const contentCont = document.querySelector('#content');
-    contentCont.appendChild(modal);
-  }
-
-  return {
-    modal,
-    render
-  }
+ 
+  return modal;
 }
 
 export {
