@@ -28,15 +28,7 @@ const nav = (projects) => {
   el.appendChild(section);
   el.appendChild(projectsList);
 
-  const render = () => {
-    const contentCont = document.querySelector('#content');
-    contentCont.appendChild(el);
-  }
-
-  return { 
-    el,
-    render
-  }
+  return el;  
 }
 
 export { nav }
