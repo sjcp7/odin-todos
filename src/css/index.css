@@ -69,7 +69,8 @@ main {
 #tasks-banner {
   display: flex;
   justify-content: space-between;
-  margin: 20px 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
   border-bottom: 1px solid black;
   padding-bottom: 10px;
 }
