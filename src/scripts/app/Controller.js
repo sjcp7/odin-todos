@@ -20,13 +20,31 @@ const Controller = () => {
   const newTodo = (id, title, description, deadline, priority) => Todo(id, title, description, deadline, priority);
 
   const saveProjects = (projects) => db.saveProjects(projects);
+
+  const addProject = (project) => db.addProject(project);
+
+  const saveProject = (project) => db.saveProject(project);
+
+  const deleteProject = (projectId) => db.deleteProject(projectId);
+
+  const getTodo = (projectId, todoId) => db.getTodo(projectId, todoId);
+
+  const saveTodo = (projectId, todoId) => db.saveTodo(projectId, todoId);
+
+  const deleteTodo = (projectId, todoId) => db.deleteTodo(projectId, todoId);
   
   return {
     getProjects,
     getProject,
     newProject,
     newTodo,
-    saveProjects
+    saveProjects,
+    addProject,
+    saveProject,
+    deleteProject,
+    getTodo,
+    saveTodo,
+    deleteTodo
   }
 }
 
