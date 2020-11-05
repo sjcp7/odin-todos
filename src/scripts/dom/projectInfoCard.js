@@ -1,7 +1,7 @@
 const projectInfoCard = (projectName) => {
-  const el = document.createElement('div');
-  el.id = 'project-info-card';
-  el.classList.add('centered');
+  const card = document.createElement('div');
+  card.id = 'project-info-card';
+  card.classList.add('centered');
 
   const h1 = document.createElement('h1');
   h1.textContent = projectName;
@@ -11,16 +11,10 @@ const projectInfoCard = (projectName) => {
   const delBtnWrapper = document.createElement('span');
   delBtnWrapper.appendChild(delBtn);
 
-  el.appendChild(h1);
-  el.appendChild(delBtnWrapper);
-  const render = () => {
-    const mainCont = document.querySelector('main');
-    mainCont.appendChild(el);
-  }
-  return {
-    el,
-    render
-  }
+  card.appendChild(h1);
+  card.appendChild(delBtnWrapper);
+  
+  return card;
 }
 
 export { projectInfoCard }

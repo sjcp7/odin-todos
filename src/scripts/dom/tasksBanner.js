@@ -1,6 +1,7 @@
 const tasksBanner = () => {
   const section = document.createElement('section');
   section.id = 'tasks-banner';
+  section.classList.add('centered');
 
   const h2 = document.createElement('h2');
   h2.textContent = 'Tasks';
@@ -12,14 +13,8 @@ const tasksBanner = () => {
 
   section.appendChild(h2);
   section.appendChild(addBtnWrapper);
-  const render = () => {
-    const tasksCont = document.querySelector('#tasks-container');
-    tasksCont.appendChild(section);
-  }
-  return {
-    section,
-    render
-  }
+  
+  return section;
 }
 
 export { tasksBanner }
